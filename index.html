@@ -129,20 +129,7 @@
           this.el.addEventListener("click", (e) => { onClick(e) });
         }
       });
-
-      const tskschdlr = new TaskScheduler(); 
-      let map = new Map(); 
-    
-      $.getJSON("5DSim.json", (data)=>{
-        tskschdlr.map = map;
-        tskschdlr.load(data);
-      }); 
-
-
-      console.log("tskschdlr: ", tskschdlr);
-
-
-     
+  
     </script>
   </head>
  
