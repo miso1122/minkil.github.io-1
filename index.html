@@ -56,7 +56,7 @@
             if(e.target?.hasAttribute("laser-controls")){
               raycaster = getPickingRaycaster(e.target);
             }
-            else
+            else if(e.target?.hasAttribute("cursor"))
             {
               raycaster = new THREE.Raycaster();
               let cam = document.querySelector("[camera]").getObject3D('camera');  
