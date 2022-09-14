@@ -61,7 +61,7 @@
               if(AFRAME.scenes[0].states.indexOf("vr-mode") > -1){ 
                 return;
               }
-              
+
               raycaster = new THREE.Raycaster();
               let cam = document.querySelector("[camera]").getObject3D('camera');  
               raycaster.setFromCamera(curMv, cam);       
@@ -137,7 +137,10 @@
           { 
             this.el.addEventListener("triggerdown", (e) => { onClick(e) });
           }
-          
+          else if(this.el.hasAttribute("cursor"))
+          { 
+            this.el.addEventListener("click", (e) => { onClick(e) });
+          }
 
           //this.el.addEventListener("pinchstarted", (e) => { onClick(e) }); // 홀로렌즈
           // this.el.addEventListener("click", (e) => { onClick(e) });
